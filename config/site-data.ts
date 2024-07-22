@@ -8,7 +8,7 @@ const navItems = [
     url: "/",
   },
   {
-    name: "Side Projects",
+    name: "Projects",
     url: "/side-projects",
   },
   {
@@ -35,15 +35,33 @@ const services = [
   {
     id: "02",
     title: "Language Learning",
-    desc: "I am focused on building tools that help people learn languages.",
+    desc: "I am focused on building tools that help people learn languages. I also love learning languages myself.",
     icon: "🌍",
   },
   {
     id: "03",
     title: "Teaching",
-    desc: "I work as an instructor teaching web development bootcamps to beginners.",
+    desc: "I work as a sofware developer and instructor teaching web development bootcamps for beginners.",
     icon: "👨‍🏫",
   },
+  {
+    id: "04",
+    title: "Hobbies",
+    desc: "Outside of programming, I enjoy hiking, going to the gym, content creation, and learning new things.",
+    icon: "🏋️‍♂️",
+  },
+  {
+    id: "05",
+    title: "Future Projects",
+    desc: "I am working on a language learning site with some friends. We plan to launch it in late 2024.",
+    icon: "🗺️"
+  },
+  {
+    id: "06",
+    title: "YouTube",
+    desc: "I have a YouTube channel where I post tutorials on web development. I enjoy making videos.",
+    icon: "🎥",
+  }
 ];
 
 const experience =
@@ -83,6 +101,29 @@ const projects = [
     desc: "A web application that helps language learners keep track of their immersion activities.",
     imgPreview: "/immersion-diary-preview.png",
     imgAlt: "MyImmersionDiary landing page",
+    slug: "my-immersion-diary",
+    fullWriteup: [
+      {
+        title: "The problem",
+        content:
+          "Language learners need to immerse themselves in the language they are learning to make progress. However, many learners struggle to keep track of their immersion activities or resort to just using an Excel spreadsheet. MyImmersionDiary generates graphs for them based on user data, so they can see their progress over time. ",
+      },
+      {
+        title: "The solution",
+        content:
+          "MyImmersionDiary is a web application that helps language learners keep track of their immersion activities. Users can log their immersion activities and see their progress over time. It allows the user to set a daily goal and overall goal for any amount of languages they are learning. MyImmersionDiary also uses user data to generate detailed statistics about their immersion activities. User's have a tonne of options availabe when it comes to recording their immersion activities such as: reading, watching, listening, speaking, writing, and more. ",
+      },
+      {
+        title: "Tech stack",
+        content:
+          "I used Next.JS, TypeScript, MongoDB, Kinde, Tailwind CSS, and Shadcn UI to build this project. I used Kinde to have a simple login / register flow for users; they don't need to remember a password, they just need to remember their email address. I used ShadCN for the vast majority of the UI components and Tailwind CSS for the rest. I use MongoDB to store user data such as immersion activities and I sync it with Kinde to store user data such as email addresses. ",
+      },
+      {
+        title: "Future plans",
+        content:
+          "I plan to add more features to MyImmersionDiary, the eventual goal is to have the most useful immersion tracking tool for language learners on the web. You can find a complete roadmap of the project on the official site. ",
+      },
+    ],
     stack: [
       {
         name: "Next.JS",
@@ -116,6 +157,29 @@ const projects = [
     desc: "A web application for ESL teachers who want to practice speaking with their students.",
     imgPreview: "/infinite-convo-preview.png",
     imgAlt: "InfiniteConvo landing page",
+    slug: "infinite-convo",
+    fullWriteup: [
+      {
+        title: "The problem",
+        content:
+          "ESL teachers need to practice speaking with their students to help them improve their English. However, many teachers struggle to find the time to practice speaking with their students or resort to just using a textbook. InfiniteConvo hosts a collection of random conversation topics and questions for teachers, so they can practice speaking with their students. ",
+      },
+      {
+        title: "The solution",
+        content:
+          "InfiniteConvo is a web application that has over 40 random conversation topics for ESL teachers and their students as well as a tonne of questions for each topic. What differentiates the site from competitors is that it also has collocations, example sentences, discussion images and vocabulary for each topic. Teachers can use all of the resources to have the best possible speaking sessions with their students. ",
+      },
+      {
+        title: "Tech stack",
+        content:
+          "I used Next.JS, TypeScript, MongoDB, and Tailwind CSS to build this project. I used MongoDB to store user data such as conversation topics and all the associated data for each topic. I used Tailwind CSS for the UI components and Next.JS for the front-end. I also used TypeScript for the project. ",
+      },
+      {
+        title: "Future plans",
+        content:
+          "I plan to add more features to InfiniteConvo in the future, but at the moment I am focusing on updating the content and making sure the site is as useful as possible for ESL teachers.",
+      },
+    ],
     stack: [
       {
         name: "Next.JS",
@@ -140,7 +204,30 @@ const projects = [
     title: "AlfredWebDev",
     desc: "My personal website where I share my work, etc. I will post tutorials soon as well.",
     imgPreview: "/alfredwebdev-preview.png",
+    slug: "alfred-web-dev",
     imgAlt: "AlfredWebDev landing page",
+    fullWriteup: [
+      {
+        title: "The problem",
+        content:
+          "I wanted to have a personal website where I could share my work, projects, and tutorials with the world. I also wanted to have a place where people could contact me if they wanted to work with me or collaborate on a project. ",
+      },
+      {
+        title: "The solution",
+        content:
+          "AlfredWebDev is a personal website where I share my work, projects, and tutorials with the world. I have a contact form where people can contact me if they want to work with me or collaborate on a project.",
+      },
+      {
+        title: "Tech stack",
+        content:
+          "I used Next.JS, TypeScript, Tailwind CSS, and Shadcn UI to build this project. I used Next.JS with Typescript for the frontend. I used Tailwind CSS for some of the styling, but mostly it is just Shadcn.",
+      },
+      {
+        title: "Future plans",
+        content:
+          "I do not have any particulary elaborate plans for this site. I will just continue to update the site with more projects as I do them and perhaps integrate some YouTube tutorials in the future that I can share on the site. ",
+      },
+    ],
     stack: [
       {
         name: "Next.JS",

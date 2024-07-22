@@ -7,7 +7,7 @@ const Index = () => {
       {projects.map((project) => {
         return (
           <Link key={project.id} className="border-2 border-black"
-            href={`/side-projects/${project.id}`}
+            href={`/project/${project.slug}`}
           >
             <img
               src={project.imgPreview}

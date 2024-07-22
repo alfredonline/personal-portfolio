@@ -1,4 +1,8 @@
-import { experience, currentRole, socialMedia } from "../../../config/site-data";
+import {
+  experience,
+  currentRole,
+  socialMedia,
+} from "../../../config/site-data";
 import { Card } from "@/components/ui/card";
 import { FaReact } from "react-icons/fa";
 import { DiMongodb, DiNodejs } from "react-icons/di";
@@ -39,7 +43,7 @@ function HireMe() {
         <img
           src="/me.png"
           alt="Hire me"
-          className="w-72 h-72 object-cover rounded-full border-2 border-black"
+          className="w-48 h-48 object-cover rounded-full border-2 border-black"
         />
         <h2
           className="text-4xl rotate-12 hidden md:block"
@@ -79,7 +83,7 @@ function EmployeeCard({
   Name: string;
 }) {
   return (
-    <Card className="w-full max-w-sm p-6 grid gap-6">
+    <Card className="w-full md:max-w-sm p-6 grid gap-6 rounded-none border-none">
       <div className="flex items-center gap-4">
         <div className="rounded-md h-24 w-24">
           <img
@@ -125,16 +129,8 @@ const Index = () => {
           <h2 className="text-4xl md:text-5xl font-bold flex flex-col">
             <div className="flex items-center">
               <div>Skills</div>{" "}
-              <div className="relative ml-2">
+              <div className="ml-2 border-orange-500 border-b-4">
                 and
-                <div
-                  className="w-[100px] h-[5px] skew-x-12 absolute"
-                  style={{
-                    bottom: "-10%",
-                    left: "-10px",
-                    backgroundColor: "#f59e0b",
-                  }}
-                ></div>
               </div>
             </div>
             <div>experience</div>
@@ -150,27 +146,35 @@ const Index = () => {
           Name={currentRole.name}
         />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4 p-8">
-        {icons.map(({ icon: Icon }, index) => (
-          <div
-            key={index}
-            className="border p-4 rounded-md border-black w-48 flex gap-4 items-center justify-center"
-          >
-            {<Icon size={32} />}
-            <div className="text-lg font-semibold">{icons[index].name}</div>
+      <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center gap-4 p-8">
+          {icons.map(({ icon: Icon }, index) => (
+            <div
+              key={index}
+              className="border-2 p-4 border-black w-72 flex gap-4 items-center justify-center"
+            >
+              {
+                <Icon
+                  size={48}
+                  color="white"
+                  className="bg-blue-500 p-2 rounded-full"
+                />
+              }
+              <div className="text-lg font-semibold">{icons[index].name}</div>
+            </div>
+          ))}
+        </div>
+        <HireMe />
+      </div>
+      <div className="flex items-center gap-4 p-8 flex-wrap justify-center">
+        {socialMedia.map((social, index) => (
+          <div key={index} className="flex items-center gap-4">
+            <social.icon size={32} />
+            <a href={social.url} className="text-lg font-semibold">
+              {social.name}
+            </a>
           </div>
         ))}
-      </div>
-      <HireMe />
-      <div className="flex items-center gap-4 p-8 flex-wrap justify-center">
-      {
-        socialMedia.map((social, index) => (
-            <div key={index} className="flex items-center gap-4">
-                <social.icon size={32} />
-                <a href={social.url} className="text-lg font-semibold">{social.name}</a>
-            </div>
-        ))
-      }
       </div>
     </div>
   );
