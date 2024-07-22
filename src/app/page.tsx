@@ -1,5 +1,5 @@
 import Hero from "@/components/hero";
-import Services from "@/components/services";
+import Services from "@/components/facts";
 import Skills from "@/components/skills";
 
 export default function Home() {

@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const Index = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 p-4 min-h-screen items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 p-4 items-center">
       <div className="p-4 flex flex-col gap-4">
         <p className="text-4xl font-bold">👨🏻‍💻 👨‍🏫</p>
         <div className="flex flex-col space-y-4">

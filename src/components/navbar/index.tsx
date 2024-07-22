@@ -45,7 +45,7 @@ function MobileNav() {
         <Button
           className="mr-2 p-4 text-base bg-white hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
           style={{
-            backgroundColor: "white"
+            backgroundColor: "white",
           }}
         >
           <svg
@@ -115,39 +115,39 @@ const Index = () => {
 
   return (
     <nav className="p-8 border-b-2 border-b-black h-[80px] flex items-center justify-between">
-      <h2 className="text-2xl font-bold">AlfredWebDev</h2>
-      {
-        // Mobile Nav
+      <div className="flex items-center justify-between md:gap-4">
+        <Link href="/" className="text-2xl font-bold">
+          AlfredWebDev
+        </Link>
         <div>
-          {" "}
           <MobileNav />
         </div>
-      }
-      <div className="items-center space-x-4 hidden lg:flex">
-        {navItems?.map(
-          (
-            item: {
-              name: string;
-              url: string;
-            },
-            index
-          ) => {
-            return (
-              <Link
-                key={index + item.name}
-                href={item.url}
-                className={`${
-                  (item.url === "/" && path === "/") ||
-                  (item.url !== "/" && path.startsWith(item.url))
-                    ? "custom-orange rounded-full px-4 py-2 w-[180px] font-semibold flex justify-center"
-                    : "rounded-full px-4 py-2 w-[180px] flex justify-center font-semibold"
-                }`}
-              >
-                {item.name}
-              </Link>
-            );
-          }
-        )}
+        <div className="items-center space-x-4 hidden lg:flex">
+          {navItems?.map(
+            (
+              item: {
+                name: string;
+                url: string;
+              },
+              index
+            ) => {
+              return (
+                <Link
+                  key={index + item.name}
+                  href={item.url}
+                  className={`${
+                    (item.url === "/" && path === "/") ||
+                    (item.url !== "/" && path.startsWith(item.url))
+                      ? "custom-orange rounded-full px-4 py-2 w-[100px] font-semibold flex justify-center"
+                      : "rounded-full px-4 py-2 w-[100px] flex justify-center font-semibold"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            }
+          )}
+        </div>
       </div>
       <Button variant={"default"} size={"default"} className="hidden lg:flex">
         Get in touch
