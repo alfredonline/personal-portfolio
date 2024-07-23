@@ -7,7 +7,7 @@ import { FaPython } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
 import { SiAzuredevops } from "react-icons/si";
 
-const siteName = "AlfredWebDev";
+const siteName = "AlfieWebDev";
 
 const navItems = [
   {
@@ -94,7 +94,7 @@ const socialMedia = [
   },
   {
     name: "YouTube",
-    url: "https://www.youtube.com/@alfredwebdev",
+    url: "https://www.youtube.com/channel/UCx0zjKcwImRPWoWeUQenR9w",
     icon: FaYoutube,
   },
   {
@@ -215,12 +215,12 @@ const projects = [
   },
   {
     id: "03",
-    title: "AlfredWebDev",
+    title: "AlfieWebDev",
     desc: "My personal website where I share my work, etc. I will post tutorials soon as well.",
-    imgPreview: "/alfredwebdev-preview.png",
-    slug: "alfred-web-dev",
-    imgAlt: "AlfredWebDev landing page",
-    link: "https://alfredwebdev.com",
+    imgPreview: "/alfiedwebdev-preview.png",
+    slug: "alfie-web-dev",
+    imgAlt: "AlfieWebDev landing page",
+    link: "https://alfiewebdev.com",
     repo: "https://github.com/alfredonline/personal-portfolio",
     fullWriteup: [
       {
@@ -231,7 +231,7 @@ const projects = [
       {
         title: "The solution",
         content:
-          "AlfredWebDev is a personal website where I share my work, projects, and tutorials with the world. I have a contact form where people can contact me if they want to work with me or collaborate on a project.",
+          "AlfieWebDev is a personal website where I share my work, projects, and tutorials with the world. I have a contact form where people can contact me if they want to work with me or collaborate on a project.",
       },
       {
         title: "Tech stack",
