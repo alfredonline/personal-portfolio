@@ -25,7 +25,7 @@ const Page = ({
   return (
     <Container className="!pt-0">
       <article className="mx-auto max-w-screen-md ">
-        <div className="p-8 min-h-screen">
+        <div className="p-2 md:p-8 min-h-screen">
           <h2 className="text-4xl font-bold">
             {!data?.title ? project : data.title}
           </h2>
