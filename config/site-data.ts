@@ -217,7 +217,7 @@ const projects = [
     id: "03",
     title: "AlfieWebDev",
     desc: "My personal website where I share my work, etc. I will post tutorials soon as well.",
-    imgPreview: "/alfiedwebdev-preview.png",
+    imgPreview: "/alfiewebdev-preview.png",
     slug: "alfie-web-dev",
     imgAlt: "AlfieWebDev landing page",
     link: "https://alfiewebdev.com",
