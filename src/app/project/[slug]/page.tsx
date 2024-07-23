@@ -71,6 +71,14 @@ const Page = ({
             );
           })}
         </div>
+        <div className="flex gap-4 p-8">
+          <a target="_blank" rel="noopener noreferrer" href={data?.repo}>
+            Repo
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href={data?.link}>
+            Live Site
+          </a>
+        </div>
       </article>
     </Container>
   );

@@ -1,6 +1,13 @@
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb, SiShadcnui, SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { DiMongodb, DiNodejs } from "react-icons/di";
+import { FaPython } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+import { SiAzuredevops } from "react-icons/si";
+
+const siteName = "AlfredWebDev";
 
 const navItems = [
   {
@@ -17,6 +24,9 @@ const navItems = [
   },
 ];
 
+const sideProjectsSubheading =
+  "As a developer with a full time job, I only have a few side projects that I work on in my free time. Here are some of them.";
+
 const heroData = {
   Primary_hero_text: "Software developer and instructor",
   secondary_hero_text:
@@ -25,7 +35,7 @@ const heroData = {
   buttonUrl: "/contact",
 };
 
-const services = [
+const facts = [
   {
     id: "01",
     title: "Web Development",
@@ -54,14 +64,14 @@ const services = [
     id: "05",
     title: "Future Projects",
     desc: "I am working on a language learning site with some friends. We plan to launch it in late 2024.",
-    icon: "🗺️"
+    icon: "🗺️",
   },
   {
     id: "06",
     title: "YouTube",
     desc: "I have a YouTube channel where I post tutorials on web development. I enjoy making videos.",
     icon: "🎥",
-  }
+  },
 ];
 
 const experience =
@@ -102,6 +112,8 @@ const projects = [
     imgPreview: "/immersion-diary-preview.png",
     imgAlt: "MyImmersionDiary landing page",
     slug: "my-immersion-diary",
+    link: "https://myimmersiondiary.com",
+    repo: "https://github.com/alfredonline/immersion",
     fullWriteup: [
       {
         title: "The problem",
@@ -158,6 +170,8 @@ const projects = [
     imgPreview: "/infinite-convo-preview.png",
     imgAlt: "InfiniteConvo landing page",
     slug: "infinite-convo",
+    link: "https://infiniteconvo.com",
+    repo: "https://github.com/alfredonline/convo-site",
     fullWriteup: [
       {
         title: "The problem",
@@ -206,6 +220,8 @@ const projects = [
     imgPreview: "/alfredwebdev-preview.png",
     slug: "alfred-web-dev",
     imgAlt: "AlfredWebDev landing page",
+    link: "https://alfredwebdev.com",
+    repo: "https://github.com/alfredonline/personal-portfolio",
     fullWriteup: [
       {
         title: "The problem",
@@ -268,13 +284,33 @@ const professional_life = [
   },
 ];
 
+const hireMeParagraph =
+  "I am interested in working on web apps that focus on language learning.You can contact me if you have a project that you would like to collaborate on.";
+
+const skillsIcons = [
+  { name: "React", icon: FaReact },
+  { name: "MongoDB", icon: DiMongodb },
+  { name: "Node.js", icon: DiNodejs },
+  { name: "Tailwind CSS", icon: RiTailwindCssFill },
+  { name: "Shadcn UI", icon: SiShadcnui },
+  { name: "Python", icon: FaPython },
+  { name: "Git", icon: FaGitAlt },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Azure DevOps", icon: SiAzuredevops },
+  { name: "Next.js", icon: RiNextjsFill },
+];
+
 export {
   navItems,
   heroData,
-  services,
+  facts,
   experience,
   currentRole,
   socialMedia,
   projects,
   professional_life,
+  siteName,
+  sideProjectsSubheading,
+  hireMeParagraph,
+  skillsIcons,
 };

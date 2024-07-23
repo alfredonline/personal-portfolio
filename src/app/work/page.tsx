@@ -20,8 +20,10 @@ const Page = () => {
       </h2>
       <br />
       <div className="flex flex-col gap-4">
-        {professional_life.map((paragraph) => {
-          return <p className="text-lg text-gray-600">{paragraph.paragraph}</p>;
+        {professional_life.map((paragraph, index) => {
+          return <p className="text-lg text-gray-600"
+          key={index}
+          >{paragraph.paragraph}</p>;
         })}
       </div>
     </div>

@@ -1,12 +1,12 @@
 import Hero from "@/components/hero";
-import Services from "@/components/facts";
+import Facts from "@/components/facts";
 import Skills from "@/components/skills";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <Services />
+      <Facts />
       <Skills />
     </div>
   );
