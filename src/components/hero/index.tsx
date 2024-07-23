@@ -1,5 +1,6 @@
 import { heroData } from "../../../config/site-data";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const Index = () => {
   return (
@@ -17,10 +18,12 @@ const Index = () => {
         </div>
       </div>
       <div className="flex justify-center md:justify-end items-center p-8">
-        <img
+        <Image
           src="/me.png"
           alt="hero image of a person learning"
-          className="object-cover w-72 h-72 rounded-full border-2 border-black"
+          className="object-cover rounded-full border-2 border-black"
+          width={300}
+          height={300}
         />
       </div>
     </div>

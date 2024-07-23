@@ -1,4 +1,5 @@
 import Projects from "@/components/projects";
+import { sideProjectsSubheading } from "../../../config/site-data";
 
 const Page = () => {
   return (
@@ -10,17 +11,16 @@ const Page = () => {
           projects
           <div
             className="w-[170px] h-[5px] skew-x-12 absolute"
-            style={{ bottom: "-10%", left: "-10px", 
-                backgroundColor: "#f59e0b"
-
+            style={{
+              bottom: "-10%",
+              left: "-10px",
+              backgroundColor: "#f59e0b",
             }}
           ></div>
         </span>
       </h2>
       <br />
-      <p className="text-lg text-gray-600">
-        As a developer with a full time job, I only have a few side projects that I work on in my free time. Here are some of them.
-      </p>
+      <p className="text-lg text-gray-600">{sideProjectsSubheading}</p>
       <br />
       <br />
       <Projects />

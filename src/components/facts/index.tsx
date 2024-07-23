@@ -1,4 +1,4 @@
-import { services } from "../../../config/site-data";
+import { facts } from "../../../config/site-data";
 
 const Index = () => {
   return (
@@ -12,15 +12,15 @@ const Index = () => {
       <br />
       <br />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {services.map((service) => {
+        {facts.map((fact) => {
           return (
             <div
-              key={service.id}
+              key={fact.id}
               className="p-4 border-2 border-black flex flex-col gap-4 bg-white"
             >
-              <p className="text-4xl">{service.icon}</p>
-              <h1 className="text-2xl font-bold">{service.title}</h1>
-              <p className="text-lg text-gray-600">{service.desc}</p>
+              <p className="text-4xl">{fact.icon}</p>
+              <h1 className="text-2xl font-bold">{fact.title}</h1>
+              <p className="text-lg text-gray-600">{fact.desc}</p>
             </div>
           );
         })}

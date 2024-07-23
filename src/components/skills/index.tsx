@@ -2,31 +2,12 @@ import {
   experience,
   currentRole,
   socialMedia,
+  hireMeParagraph,
 } from "../../../config/site-data";
 import { Card } from "@/components/ui/card";
-import { FaReact } from "react-icons/fa";
-import { DiMongodb, DiNodejs } from "react-icons/di";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiShadcnui } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { SiAzuredevops } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
-
-const icons = [
-  { name: "React", icon: FaReact },
-  { name: "MongoDB", icon: DiMongodb },
-  { name: "Node.js", icon: DiNodejs },
-  { name: "Tailwind CSS", icon: RiTailwindCssFill },
-  { name: "Shadcn UI", icon: SiShadcnui },
-  { name: "Python", icon: FaPython },
-  { name: "Git", icon: FaGitAlt },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "Azure DevOps", icon: SiAzuredevops },
-  { name: "Next.js", icon: RiNextjsFill },
-];
+import { skillsIcons } from "../../../config/site-data";
+import Image from "next/image";
 
 function HireMe() {
   return (
@@ -40,10 +21,12 @@ function HireMe() {
         >
           &lt;&gt;
         </h2>
-        <img
+        <Image
           src="/me.png"
           alt="Hire me"
-          className="w-48 h-48 object-cover rounded-full border-2 border-black"
+          className="object-cover rounded-full border-2 border-black"
+          width={250}
+          height={250}
         />
         <h2
           className="text-4xl rotate-12 hidden md:block"
@@ -56,9 +39,7 @@ function HireMe() {
       </div>
       <h2 className="text-4xl font-bold">Let&apos;s work together!</h2>
       <p className="text-lg text-gray-600">
-        I am interested in working on web apps that focus on language learning.
-        You can contact me if you have a project that you would like to
-        collaborate on.
+        {hireMeParagraph}
       </p>
       <Button variant="default" size="default">
         Contact me
@@ -85,15 +66,6 @@ function EmployeeCard({
   return (
     <Card className="w-full md:max-w-sm p-6 grid gap-6 rounded-none border-none">
       <div className="flex items-center gap-4">
-        <div className="rounded-md h-24 w-24">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-zZ0ZiaHY19rt6SLsu-PvczHsACqaatJTj3uTG7DJ4ijSn74d05NMlOx3eecxZ2v3BsA&usqp=CAU"
-            width={32}
-            height={32}
-            alt="Company Logo"
-            className="w-72 h-24 text-primary-foreground object-cover"
-          />
-        </div>
         <div className="grid gap-1">
           <h3 className="text-xl font-semibold">{Name}</h3>
           <p className="text-muted-foreground">{Role}</p>
@@ -148,7 +120,7 @@ const Index = () => {
       </div>
       <div className="flex flex-wrap justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center gap-4 p-8">
-          {icons.map(({ icon: Icon }, index) => (
+          {skillsIcons.map(({ icon: Icon }, index) => (
             <div
               key={index}
               className="border-2 p-4 border-black w-72 flex gap-4 items-center justify-center"
@@ -160,7 +132,7 @@ const Index = () => {
                   className="bg-blue-500 p-2 rounded-full"
                 />
               }
-              <div className="text-lg font-semibold">{icons[index].name}</div>
+              <div className="text-lg font-semibold">{skillsIcons[index].name}</div>
             </div>
           ))}
         </div>
