@@ -1,5 +1,4 @@
 import { projects } from "../../../config/site-data";
-import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -24,16 +23,6 @@ const Index = () => {
               <div className="p-4 flex flex-col gap-2">
                 <h1 className="text-2xl font-bold">{project.title}</h1>
                 <p className="text-muted-foreground">{project.desc}</p>
-              </div>
-              <div className="flex items-center justify-center p-4">
-                <FaArrowRight
-                  size={40}
-                  style={{
-                    backgroundColor: "#5c64cf",
-                    color: "white",
-                  }}
-                  className="rounded-full p-2"
-                />
               </div>
             </div>
           </Link>
