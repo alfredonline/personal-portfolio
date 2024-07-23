@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { hireMeParagraph } from "../../../config/site-data";
+import { buttonVariants } from "../ui/button";
 
 function HireMe({ isContactPage }: { isContactPage?: boolean }) {
   return (
@@ -31,15 +32,25 @@ function HireMe({ isContactPage }: { isContactPage?: boolean }) {
         </h2>
       </div>
       <h2 className="text-4xl font-bold">Let&apos;s work together!</h2>
-      <p className="text-lg text-gray-600"
+      <p
+        className="text-lg text-gray-600"
         style={{
-            textAlign: isContactPage ? "center" : "left",
+          textAlign: isContactPage ? "center" : "left",
         }}
-      >{hireMeParagraph}</p>
+      >
+        {hireMeParagraph}
+      </p>
       {!isContactPage && (
-        <Button variant="default" size="default">
+        <Link
+          className={buttonVariants({
+            variant: "default",
+            size: "default",
+            className: "w-full md:w-auto",
+          })}
+          href="/contact"
+        >
           Contact me
-        </Button>
+        </Link>
       )}
     </div>
   );

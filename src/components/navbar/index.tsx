@@ -2,12 +2,8 @@
 import Link from "next/link";
 import { navItems, siteName } from "../../../config/site-data";
 import { usePathname } from "next/navigation";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import MobileNav from "./mobile";
-
-
-
-
 
 const Index = () => {
   const path = usePathname();
@@ -48,13 +44,16 @@ const Index = () => {
           )}
         </div>
       </div>
-      <Button
-        variant={"default"}
-        size={"default"}
-        className="hidden lg:flex p-6"
+      <Link
+        href={"/contact"}
+        className={buttonVariants({
+          variant: "default",
+          size: "default",
+          className: "hidden lg:flex",
+        })}
       >
         Get in touch
-      </Button>
+      </Link>
     </nav>
   );
 };
