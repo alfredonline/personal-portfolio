@@ -33,10 +33,7 @@ function HireMe({ isContactPage }: { isContactPage?: boolean }) {
       </div>
       <h2 className="text-4xl font-bold">Let&apos;s work together!</h2>
       <p
-        className="text-lg text-gray-600"
-        style={{
-          textAlign: isContactPage ? "center" : "left",
-        }}
+        className="text-lg text-gray-600 text-center"
       >
         {hireMeParagraph}
       </p>
