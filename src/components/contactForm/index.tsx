@@ -7,7 +7,6 @@ const ContactForm = () => {
   // Handle form submission
   async function handleSubmit(formData: FormData) {
     "use server";
-    console.log("Form Data", formData);
     sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
     const rawformData = {
       to: process.env.SENDGRID_TO_EMAIL!,
@@ -16,16 +15,26 @@ const ContactForm = () => {
       text: formData.get("message"),
     };
 
+    if (
+      !rawformData.to ||
+      !rawformData.from ||
+      !rawformData.subject ||
+      !rawformData.text
+    ) {
+      return;
+    }
+
     try {
       await sgMail.send({
         ...rawformData,
         text: `From: ${formData.get("email")}\n\n${formData.get("message")}`,
       });
-      console.log("Email Send Successfully!");
     } catch (error) {
       // Send an error response
-      console.log(error);
-      console.log("Something went wrong, please try again!");
+      return {
+        status: 500,
+        body: "Error sending message",
+      };
     }
   }
 

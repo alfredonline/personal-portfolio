@@ -1,11 +1,10 @@
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube, FaGitAlt, FaPython  } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb, SiShadcnui, SiTypescript } from "react-icons/si";
+import { SiMongodb, SiShadcnui, SiTypescript,SiPrisma, SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { DiMongodb, DiNodejs } from "react-icons/di";
-import { FaPython } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
 import { SiAzuredevops } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const siteName = "AlfieWebDev";
 
@@ -298,6 +297,9 @@ const skillsIcons = [
   { name: "TypeScript", icon: SiTypescript },
   { name: "Azure DevOps", icon: SiAzuredevops },
   { name: "Next.js", icon: RiNextjsFill },
+  { name: "Prisma", icon: SiPrisma },
+  { name: "Express", icon: SiExpress },
+  { name: "PostgreSQL", icon: BiLogoPostgresql },
 ];
 
 export {
