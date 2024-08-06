@@ -1,10 +1,23 @@
-import { FaGithub, FaLinkedin, FaYoutube, FaGitAlt, FaPython  } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaYoutube,
+  FaGitAlt,
+  FaPython,
+} from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiMongodb, SiShadcnui, SiTypescript,SiPrisma, SiExpress } from "react-icons/si";
+import {
+  SiMongodb,
+  SiShadcnui,
+  SiTypescript,
+  SiPrisma,
+  SiExpress,
+} from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { DiMongodb, DiNodejs } from "react-icons/di";
 import { SiAzuredevops } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { FaCcStripe } from "react-icons/fa";
 
 const siteName = "AlfieWebDev";
 
@@ -259,6 +272,64 @@ const projects = [
       {
         name: "Shadcn UI",
         icon: SiShadcnui,
+      },
+    ],
+  },
+  {
+    id: "04",
+    title: "YouTubeToSlides",
+    desc: "A SaaS tool that allows teachers to convert YouTube videos into presentations.",
+    imgPreview: "/youtube-to-slides-preview.png",
+    slug: "youtube-to-slides",
+    imgAlt: "YouTubeToSlides landing page",
+    link: "https://youtubetoslides.com",
+    repo: "https://github.com/alfredonline/YouTubeToPowerpoint",
+    fullWriteup: [
+      {
+        title: "The problem",
+        content:
+          "Teachers need to create presentations for their students to help them learn. However, many teachers struggle to find the time to create presentations or resort to just using a textbook. YouTubeToSlides allows teachers to convert YouTube videos into presentations for their students.",
+      },
+      {
+        title: "The solution",
+        content:
+          "YouTubeToSlides is a SaaS tool that allows teachers to convert YouTube videos into presentations for their students. Teachers can paste a YouTube link into the tool and it will generate a presentation for them. Teachers can purchase gems using Stripe and spend them on generating presentations.",
+      },
+      {
+        title: "Tech stack",
+        content:
+          "I used Next.JS, TypeScript, PostGres / PostgresSQL, UploadThing, and Tailwind CSS to build this project. I used Postgres / PostgresSQL to store user data such as presentation links and all the associated data for each presentation. I used Tailwind CSS for the UI components and Next.JS for the front-end. I also used TypeScript for the project and UploadThing to store presentations. I used Stripe for the payment system.",
+      },
+      {
+        title: "Future plans",
+        content:
+          "I plan to add more features to YouTubeToSlides in the future, such as the ability to select font size and font color based on the user's preferences. I also want to add templates for the presentations so that teachers can choose from a variety of styles. ",
+      },
+    ],
+    stack: [
+      {
+        name: "Next.JS",
+        icon: RiNextjsFill,
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+      },
+      {
+        name: "PostgreSQL",
+        icon: BiLogoPostgresql,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: RiTailwindCssFill,
+      },
+      {
+        name: "UploadThing",
+        icon: null,
+      },
+      {
+        name: "Stripe",
+        icon: FaCcStripe,
       },
     ],
   },
