@@ -1,7 +1,7 @@
 import { projects } from "../../../../config/site-data";
 import Container from "@/components/container";
-
-
+import { FaGithub } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
 
 const getProject = (slug: string) => {
   const project = projects.find((project) => project.slug === slug);
@@ -53,10 +53,22 @@ const Page = ({
           })}
         </div>
         <div className="flex gap-4 p-8">
-          <a target="_blank" rel="noopener noreferrer" href={data?.repo}>
-            Repo
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={data?.repo}
+            className="flex items-center gap-2 bg-black text-white p-4 rounded-md"
+          >
+            <FaGithub size={30} />
+            Repo Link
           </a>
-          <a target="_blank" rel="noopener noreferrer" href={data?.link}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={data?.link}
+            className="flex items-center gap-2 bg-black text-white p-4 rounded-md"
+          >
+            <TbWorldWww size={30} />
             Live Site
           </a>
         </div>

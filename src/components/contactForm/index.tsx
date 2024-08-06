@@ -16,6 +16,17 @@ const ContactForm = () => {
     };
 
     if (
+      formData.get("name") === "" ||
+      formData.get("email") === "" ||
+      formData.get("message") === ""
+    ) {
+      return {
+        status: 400,
+        body: "Please fill in all fields",
+      };
+    }
+
+    if (
       !rawformData.to ||
       !rawformData.from ||
       !rawformData.subject ||
